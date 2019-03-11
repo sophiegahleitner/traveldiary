@@ -4,6 +4,8 @@
         <ul>
             <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:time="diary.time"></Diary>
         </ul>
+        <input type="text" id = "country">
+        <input type="date" id = "time">
         <button v-on:click="createDiary">Create new diary</button>
     </div>
 </template>
@@ -39,7 +41,7 @@
         },
         methods: {
             createDiary: function (e) {
-                console.log("new diary");
+                this.diaries.push({id:this.diaries.length+1, country: document.getElementById("country").value, time: document.getElementById("time").value});
             }
         }
     }

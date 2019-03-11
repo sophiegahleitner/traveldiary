@@ -1,6 +1,6 @@
 <template>
     <li class="diary">
-        <router-link :to="{ name: '/diary/' + id }"><h2>{{country}}</h2></router-link>
+        <router-link :to="{ name: 'diary', params:{id: id} }"><h2>{{country}}</h2></router-link>
         <h3>{{time}}</h3>
     </li>
 </template>

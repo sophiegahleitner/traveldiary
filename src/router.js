@@ -20,7 +20,7 @@ export default new Router({
             component: CreateDiary
         }, {
             path: '/diary/:id',
-            name: 'DiaryDetail',
+            name: 'diary',
             component: DiaryDetail
         }
     ]
