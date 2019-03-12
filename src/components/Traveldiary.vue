@@ -2,20 +2,23 @@
     <div class="traveldiary">
         <Header></Header>
         <Diaries></Diaries>
+        <MapComponent></MapComponent>
         <Footer></Footer>
     </div>
 </template>
 
 <script>
-    import Header from './Header.vue';
     import Diaries from './Diaries.vue';
     import Footer from './Footer.vue';
+    import Header from './Header.vue';
+    import MapComponent from './MapComponent.vue';
 
     export default {
         name: 'traveldiary',
         components: {
             Header,
             Diaries,
+            MapComponent,
             Footer,
         },
     }

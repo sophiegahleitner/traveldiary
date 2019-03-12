@@ -10,6 +10,7 @@
     </div>
 </template>
 
+
 <script>
     import Diary from './Diary.vue';
 
