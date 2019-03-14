@@ -1,0 +1,11 @@
+.diary {
+  width: calc(33% - 60px);
+  margin: 30px;
+  box-shadow: 1px 5px 15px #ddd;
+  display: inline-block;
+
+  &-facts {
+    padding: 10px;
+  }
+}
+
