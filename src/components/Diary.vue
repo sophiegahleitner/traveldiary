@@ -13,7 +13,18 @@
 </template>
 
 <style>
-
+    .diary {
+        width: calc(33% - 60px);
+        margin: 30px;
+        box-shadow: 1px 5px 15px #ddd;
+        display: inline-block;
+    }
+    .diary:hover{
+        box-shadow: none;
+    }
+    .diary-facts {
+        padding: 10px;
+    }
 </style>
 
 <script>
