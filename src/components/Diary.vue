@@ -19,7 +19,9 @@
         box-shadow: 1px 5px 15px #ddd;
         display: inline-block;
     }
-
+    .diary:hover{
+        box-shadow: none;
+    }
     .diary-facts {
         padding: 10px;
     }
