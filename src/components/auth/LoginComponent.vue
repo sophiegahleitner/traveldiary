@@ -1,10 +1,14 @@
 <template>
-    <form @submit.prevent="login({ email, password })">
-    <input type="text" placeholder="email" v-model="email">
-    <input type="password" placeholder="password" v-model="password">
-    <button type="submit">Login</button>
-</form>
+    <div id="login">
+        <img alt="Vue logo" src="../../assets/img/bg-login.jpg">
+        <form @submit.prevent="login({ email, password })">
+            <input type="text" placeholder="email" v-model="email">
+            <input type="password" placeholder="password" v-model="password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </template>
+
 <script>
 
     export default {
