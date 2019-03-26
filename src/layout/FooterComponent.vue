@@ -1,6 +1,6 @@
 <template>
     <footer>
-        This is the footer
+        <p>made by Sophie Gahleitner & Michael Sieghartsleitner</p>
     </footer>
 </template>
 

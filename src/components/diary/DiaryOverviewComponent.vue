@@ -1,5 +1,5 @@
 <template>
-    <div class="diaries">
+    <div class="diary-overview">
         <h1>My Traveldiaries</h1>
         <ul>
             <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:time="diary.time"></Diary>
@@ -12,10 +12,10 @@
 
 
 <script>
-    import Diary from './Diary.vue';
+    import Diary from './DiaryPreviewComponent.vue';
 
     export default {
-        name: 'diaries',
+        name: 'DiaryOverviewComponent',
         components: {
             Diary
         },
@@ -41,7 +41,7 @@
             }
         },
         methods: {
-            createDiary: function (e) {
+            createDiary: function () {
                 this.diaries.push({id:this.diaries.length+1, country: document.getElementById("country").value, time: document.getElementById("time").value});
             }
         }

@@ -1,8 +1,8 @@
 <template>
-    <li class="diary">
+    <li class="diary-preview">
         <router-link :to="{ name: 'diary', params:{id: id} }">
-            <div class="diary-image">
-                <img alt="Vue logo" src="../assets/example.jpg">
+            <div class="diary-preview-image">
+                <img alt="Vue logo" src="../../assets/img/example.jpg">
             </div>
             <div class="diary-facts">
                 <h2>{{country}}</h2>
@@ -13,13 +13,13 @@
 </template>
 
 <style>
-    .diary {
+    .diary-preview {
         width: calc(33% - 60px);
         margin: 30px;
         box-shadow: 1px 5px 15px #ddd;
         display: inline-block;
     }
-    .diary:hover{
+    .diary-preview:hover{
         box-shadow: none;
     }
     .diary-facts {
@@ -29,7 +29,7 @@
 
 <script>
     export default {
-        name: 'diary',
+        name: 'DiaryComponent',
         props: {
             id: Number,
             country: String,

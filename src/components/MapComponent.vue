@@ -54,7 +54,7 @@
 
             // Create hover state and set alternative fill color
             let hs = polygonTemplate.states.create("hover");
-            hs.properties.fill = am4core.color("#367B25");
+            hs.properties.fill = am4core.color("#4987a5");
 
             // Remove Antarctica
             polygonSeries.exclude = ["AQ"];
@@ -64,12 +64,12 @@
                 "id": "US",
                 "name": "United States",
                 "value": 100,
-                "fill": am4core.color("#5C5CFF")
+                "fill": am4core.color("#78AAC3")
             }, {
                 "id": "FR",
                 "name": "France",
                 "value": 50,
-                "fill": am4core.color("#5C5CFF")
+                "fill": am4core.color("#78AAC3")
             }];
 
             // Bind "fill" property to "fill" key in data

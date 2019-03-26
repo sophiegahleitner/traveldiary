@@ -1,5 +1,5 @@
 <template>
-    <div class="diaryDetails">
+    <div class="diary-details">
         <h1>Diary Details</h1>
         <p>ID: {{$route.params.id}}</p>
     </div>
@@ -7,6 +7,6 @@
 
 <script>
     export default {
-        name: 'diaryDetails',
+        name: 'DiaryDetailComponent',
     }
 </script>

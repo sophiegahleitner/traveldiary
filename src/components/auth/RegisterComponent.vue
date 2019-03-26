@@ -1,14 +1,14 @@
 <template>
     <form @submit.prevent="login({ email, password })">
-    <input type="text" placeholder="email" v-model="email">
-    <input type="password" placeholder="password" v-model="password">
-    <button type="submit">Login</button>
-</form>
+        <input type="text" placeholder="email" v-model="email">
+        <input type="password" placeholder="password" v-model="password">
+        <button type="submit">Login</button>
+    </form>
 </template>
-<script>
 
+<script>
     export default {
-        name: 'Login',
+        name: 'RegisterComponent',
         data() {
             return {
                 email: "",

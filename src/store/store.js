@@ -1,6 +1,7 @@
-import Vuex from '../../node_modules/vuex'
-import Vue from 'vue'
-    const LOGIN = "LOGIN";
+import Vuex from '../../node_modules/vuex';
+import Vue from 'vue';
+
+const LOGIN = "LOGIN";
 const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 const LOGOUT = "LOGOUT";
 
@@ -8,8 +9,9 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        isLoggedIn: !!localStorage.getItem("token")
-    }, mutations: {
+        isLoggedIn: localStorage.getItem("token")
+    },
+    mutations: {
         [LOGIN](state) {
             state.pending = true;
         },
