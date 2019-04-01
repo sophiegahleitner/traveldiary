@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import './registerServiceWorker'
+import './registerServiceWorker.js'
 import store from './store/store.js'
 import './assets/sass/main.scss';
 import VueForm from 'vue-form';
+//import TraveldiaryDirectives from './directives.js';
 
-// import serviceworker from 'registerServiceWorker'
 Vue.config.productionTip = false;
 
+//Vue.use(TraveldiaryDirectives);
 Vue.use(VueForm, {
     inputClasses: {
         valid: 'form-control-success',

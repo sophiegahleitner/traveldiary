@@ -3,7 +3,12 @@ module.exports = {
         name: 'Traveldiary',
         themeColor: '#78AAC3',
         msTileColor: '#78AAC3',
-        workboxOptions: {...}
+        workboxOptions: {
+            cacheId: 'phrasebook',
+            importWorkboxFrom: 'local',
+            navigateFallback: 'shell.html',
+            navigateFallbackWhitelist: [/^((?!\/404).)*$/]
+        }
     }
 /*
     pluginOptions: {

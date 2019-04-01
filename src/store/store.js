@@ -24,7 +24,7 @@ const store = new Vuex.Store({
         }
     },
     actions: {
-        login({commit}, creds) {
+        login({commit}) {
             commit(LOGIN); // show spinner
             return new Promise(resolve => {
                 setTimeout(() => {
