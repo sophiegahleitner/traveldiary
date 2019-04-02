@@ -15,22 +15,27 @@ export default new Router({
         {
             path: '/',
             name: 'Traveldiary',
+            meta: { layout: "default" },
             component: Traveldiary
         }, {
             path: '/diary/create',
             name: 'CreateDiary',
+            meta: { layout: "default" },
             component: CreateDiary,
         }, {
             path: '/diary/:id',
             name: 'diary',
+            meta: { layout: "default" },
             component: DiaryDetail
         }, {
             path: '/login',
             name: 'login',
+            meta: { layout: "auth" },
             component: Login
         }, {
             path: '/register',
             name: 'register',
+            meta: { layout: "auth" },
             component: Register
         }
     ]
