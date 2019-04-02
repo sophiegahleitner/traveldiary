@@ -33,7 +33,7 @@
         name: 'DiaryComponent',
 
         props: {
-            id: Number,
+            id: String,
             country: String,
             begin: String,
             end: String
