@@ -1,21 +1,17 @@
 <template>
   <div id="app">
-    <HeaderComponent></HeaderComponent>
-    <div id="app-content">
+    <component :is="layout">
       <router-view></router-view>
-    </div>
-    <FooterComponent></FooterComponent>
+    </component>
   </div>
 </template>
 
 <script>
-    import HeaderComponent from './components/layout/HeaderComponent.vue';
-    import FooterComponent from './components/layout/FooterComponent.vue';
-
     export default {
-        components: {
-            HeaderComponent,
-            FooterComponent
-        },
+        computed: {
+            layout() {
+                return (this.$route.meta.layout || 'default') + '-layout';
+            }
+        }
     }
 </script>
