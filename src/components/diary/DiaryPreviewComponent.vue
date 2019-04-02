@@ -6,7 +6,8 @@
             </div>
             <div class="diary-facts">
                 <h2>{{country}}</h2>
-                <h3>{{time}}</h3>
+                <h3>{{begin}}-</h3>
+                <h3>{{end}}</h3>
             </div>
         </router-link>
     </li>
@@ -30,10 +31,12 @@
 <script>
     export default {
         name: 'DiaryComponent',
+
         props: {
             id: Number,
             country: String,
-            time: String
+            begin: String,
+            end: String
         }
     }
 </script>
