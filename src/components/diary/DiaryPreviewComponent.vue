@@ -6,8 +6,8 @@
             </div>
             <div class="diary-facts">
                 <h2>{{country}}</h2>
-                <h3>{{begin}}-</h3>
-                <h3>{{end}}</h3>
+                <h3>{{begin | formatDate}}-</h3>
+                <h3>{{end | formatDate}}</h3>
             </div>
         </router-link>
     </li>
