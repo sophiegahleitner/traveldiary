@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: 'callback',
+        name: 'callbackComponent',
         mounted() {
             this.$auth.handleAuthentication().then((data) => {
                 this.$router.push({ name: 'profile' })

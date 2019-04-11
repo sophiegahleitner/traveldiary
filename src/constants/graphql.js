@@ -4,6 +4,10 @@ export const ALL_PUBLIC_DIARIES_QUERY = gql`
 query AllDiariesQuery{
     diaries(where: {isPublic : true }){id, country, begin, end}
     }`;
+export const USER_DIARIES = gql`
+query UserDiariesQuery($userId: String!){
+    diaries(where: {userId : $userId }){id, country, begin, end}
+    }`;
 
 export const DIARY_DETAIL = gql`
     query diary($id: ID) {
@@ -20,7 +24,7 @@ export const DIARY_DETAIL = gql`
     }`;
 
 export const CREATE_DIARY = gql`
-mutation CREATE_DIARY($title: String! $country: String! $from: DateTime! $to: DateTime! $description: String! $isPublic: Boolean! $url: String! $filename: String! $mimeType:String!){
+mutation CREATE_DIARY($title: String! $country: String! $from: DateTime! $to: DateTime! $description: String! $isPublic: Boolean! $userId: String! $url: String! $filename: String! $mimeType:String!){
   createDiary(
     data: {
       status: PUBLISHED
@@ -30,6 +34,7 @@ mutation CREATE_DIARY($title: String! $country: String! $from: DateTime! $to: Da
       end: $to
       description: $description
       isPublic: $isPublic
+      userId: $userId
       image: {create:{
         status: PUBLISHED
         handle:$url

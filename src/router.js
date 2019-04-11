@@ -6,6 +6,7 @@ import DiaryDetail from './components/diary/DiaryDetailComponent.vue';
 import Login from './components/auth/LoginComponent.vue';
 import Register from './components/auth/RegisterComponent.vue';
 import ProfileComponent from './components/ProfileComponent.vue';
+import CallbackComponent from './components/auth/Callback.vue';
 
 Vue.use(Router)
 
@@ -55,7 +56,7 @@ const router = new Router({
         }, {
             path: '/login',
             name: 'login',
-            component: Login
+            component: Traveldiary
         }, {
             path: '/register',
             name: 'register',
@@ -64,7 +65,10 @@ const router = new Router({
             path: '/profile',
             name: 'profile',
             component: ProfileComponent
-
+        }, {
+            path: '/callback',
+            name: 'callback',
+            component: CallbackComponent
         }
     ]
 })
@@ -85,8 +89,11 @@ router.beforeEach((to, from, next) => {
         next()
     } else if (router.app.$auth.isAuthenticated()) { // if authenticated allow access
         next()
-    } else { // trigger auth0 login
+    } else if(to.name == 'profile'||to.name=="login") { // trigger auth0 login
         router.app.$auth.login()
+    }
+    else{
+        next()
     }
 })
 

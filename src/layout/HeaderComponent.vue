@@ -3,24 +3,11 @@
         <div class="logo">
             <span>Traveldiary</span>
         </div>
-        <div v-if="isLoggedIn" class="navigation">
-            <nav>
-                <ul class="navbar">
-                    <li class="navbar-item">
-                        <a class="nav-link active" href="#">Diaries</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="nav-link" href="#">My Journeys</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" @click="logout">Logout</a>
-                    </li>
-                </ul>
-            </nav>
+        <div v-if="this.$auth.isAuthenticated()" class="navigation">
+            <router-link :to="{ name: 'profile'}">Profile</router-link>
         </div>
         <div v-else class="login">
-            <router-link to="/login">Login</router-link> |
-            <router-link to="/register">Register</router-link>
+            <router-link :to="{ name: 'login' }">Login</router-link>
         </div>
     </header>
 </template>

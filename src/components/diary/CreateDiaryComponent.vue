@@ -143,6 +143,7 @@
                             to:this.model.to,
                             description:this.model.description,
                             isPublic: this.model.isPublic,
+                            userId:  this.$auth.user.name,
                             url: res.url,
                             filename: res.filename,
                             mimeType: res.mimetype,
@@ -150,6 +151,8 @@
                     })
                 } catch(e){
                     console.log(e);
+                } finally{
+                    this.$router.push({name: 'profile'})
                 }
             },
             handleFileUpload: function (event){

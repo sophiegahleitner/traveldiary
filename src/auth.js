@@ -61,7 +61,7 @@ let auth = new Vue({
                 localStorage.removeItem('expires_at')
                 localStorage.removeItem('user')
                 webAuth.logout({
-                    returnTo: 'http://www.loggedout.com/', // Allowed logout URL listed in dashboard
+                    returnTo: 'localhost:8080/', // Allowed logout URL listed in dashboard
                     clientID: 'w2NUP6DWlcOVqp5HUPdfv04giNnrg6E6', // Your client ID
                 })
             })

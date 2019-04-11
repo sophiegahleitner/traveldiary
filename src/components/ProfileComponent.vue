@@ -7,19 +7,24 @@
                 <button type="button" class="btn btn-outline-secondary btn-sm" @click="$auth.logout()">Logout</button>
             </div>
         </nav>
-        <h1 class="display-4">Hello, {{$auth.user.name}}!</h1>
+        <h1 class="display-4">Hello, {{$auth.user.nickname}}!</h1>
+        <DiaryOverviewComponent></DiaryOverviewComponent>
+        <router-link to="/diary/create" tag="button">New Diary</router-link>
+
     </div>
 </template>
 
 <script>
-
+    import DiaryOverviewComponent from './diary/DiaryOverviewComponent.vue'
     export default {
-        name: 'ProfileComponent'
+        name: 'ProfileComponent',
+        components:{
+            DiaryOverviewComponent: DiaryOverviewComponent
+        }
     }
 </script>
 
 <style scoped>
-    /*@import url('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css');*/
     .btn-primary {
         background: #468f65;
         border: 1px solid #468f65;
