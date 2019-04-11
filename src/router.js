@@ -85,11 +85,8 @@ router.beforeEach((to, from, next) => {
         next()
     } else if (router.app.$auth.isAuthenticated()) { // if authenticated allow access
         next()
-    } else if(to.name == 'profile') { // trigger auth0 login
+    } else { // trigger auth0 login
         router.app.$auth.login()
-    }
-    else {
-        next()
     }
 })
 

@@ -7,7 +7,7 @@ let webAuth = new auth0.WebAuth({
     domain: 'dev-gz1b6l9p.eu.auth0.com',
     clientID: 'w2NUP6DWlcOVqp5HUPdfv04giNnrg6E6',
     // make sure this line is contains the port: 8080
-    redirectUri: 'http://localhost:8080/profile',
+    redirectUri: 'http://localhost:8080/callback',
     // we will use the api/v2/ to access the user information as payload
     audience: 'https://dev-gz1b6l9p.eu.auth0.com/api/v2/',
     responseType: 'token id_token',

@@ -67,8 +67,8 @@
                         <div slot="required">You have to upload an image.</div>
                     </field-messages>
                 </validate>
-                <input type="checkbox" id="isPublic" v-model="model.isPublic">
                 <label for="isPublic">public diary?</label>
+                <input type="checkbox" id="isPublic" v-model="model.isPublic">
 
 
                 <div class="py-2 text-center">
