@@ -1,0 +1,21 @@
+#content-auth {
+  width: 100vw;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .auth-bg-img {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .auth-form {
+    background: rgba(0,0,0,0.7);
+  }
+}
+
+@import './login.scss';
