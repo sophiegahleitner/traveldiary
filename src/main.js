@@ -10,8 +10,8 @@ import {ApolloClient} from 'apollo-client'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import VueApollo from 'vue-apollo'
+import './filter.js';
 
-//import TraveldiaryDirectives from './directives.js';
 
 import DefaultLayout from './layouts/DefaultLayout.vue';
 import AuthLayout from './layouts/AuthLayout.vue';
@@ -20,8 +20,6 @@ Vue.component('default-layout', DefaultLayout);
 Vue.component('auth-layout', AuthLayout);
 
 Vue.config.productionTip = false;
-
-//Vue.use(TraveldiaryDirectives);
 const httpLink = new HttpLink({
     uri: 'https://api-euwest.graphcms.com/v1/cjtoo3agdcy7s01b9bc88wamr/master'
 })

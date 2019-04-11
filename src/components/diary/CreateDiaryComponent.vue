@@ -82,7 +82,7 @@
 </template>
 
 <script>
-
+    import { CREATE_DIARY } from '../../constants/graphql'
     export default {
         name: 'CreateDiaryComponent',
         data: function() {
@@ -111,7 +111,21 @@
                 }
             },
             onSubmit: function () {
-                //console.log(this.formstate.$valid);
+                console.log(this.title);
+                try{
+                    this.$apollo.mutate({
+                        mutation: CREATE_DIARY,
+                        variables: {
+                            title:"AAA",
+                            country:"count",
+                            from:"2019-04-18",
+                            to:"2019-04-18",
+                            description:"desc",
+                        }
+                    }).then(alert("done"));
+                } catch(e){
+                    console.log(e);
+                }
             }
         }
     }

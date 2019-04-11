@@ -1,10 +1,17 @@
 <template>
     <div class="diary-overview">
         <h1>My Traveldiaries</h1>
-        <ul>
-            <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end"></Diary>
-
-        </ul>
+        <section v-if="diaries">
+            <ul>
+                <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end"></Diary>
+            </ul>
+        <!--<button v-if="postCount && postCount > allPosts.length" @click="loadMorePosts">-->
+            <!--{{loading ? 'Loading...' : 'Show more'}}-->
+        <!--</button>-->
+        </section>
+        <h2 v-else>
+            Loading...
+        </h2>
         <input type="text" id = "country">
         <input type="date" id = "time">
         <button v-on:click="createDiary">Create new diary</button>
@@ -14,7 +21,7 @@
 
 <script>
     import Diary from './DiaryPreviewComponent.vue';
-    import { ALL_DIARIES_QUERY } from '../../constants/graphql'
+    import { ALL_PUBLIC_DIARIES_QUERY } from '../../constants/graphql'
 
 
     export default {
@@ -26,7 +33,6 @@
             return {
                 diaries: [],
                 loading: 0
-
             }
         },
         methods: {
@@ -35,7 +41,8 @@
             }
         },
         apollo: {
-            diaries: ALL_DIARIES_QUERY
+            $loadingKey: 'loading',
+            diaries: ALL_PUBLIC_DIARIES_QUERY
         }
 
     }
