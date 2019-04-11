@@ -1,6 +1,6 @@
 <template>
-    <div class="content-auth">
-        <img class="content-auth-bg-img" src="../assets/img/bg-login.jpg">
+    <div id="content-auth">
+        <img class="auth-bg-img" src="../assets/img/bg-login.jpg">
         <slot />
     </div>
 </template>
