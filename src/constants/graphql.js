@@ -20,14 +20,24 @@ export const DIARY_DETAIL = gql`
     }`;
 
 export const CREATE_DIARY = gql`
-mutation CREATE_DIARY($title: String! $country: String! $from: DateTime! $to: DateTime! $description: String!){
+mutation CREATE_DIARY($title: String! $country: String! $from: DateTime! $to: DateTime! $description: String! $isPublic: Boolean! $url: String! $filename: String! $mimeType:String!){
   createDiary(
     data: {
+      status: PUBLISHED
       title: $title
       country: $country
       begin: $from
       end: $to
       description: $description
+      isPublic: $isPublic
+      image: {create:{
+        status: PUBLISHED
+        handle:$url
+        fileName:$filename
+        mimeType: $mimeType
+      }
+      
+      }
     }
   ) 
   {

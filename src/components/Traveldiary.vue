@@ -7,7 +7,7 @@
 
 <script>
     import Diaries from './diary/DiaryOverviewComponent.vue';
-    import MapComponent from './map/MapComponent.vue';
+    import MapComponent from './MapComponent.vue';
 
     export default {
         name: 'traveldiary',

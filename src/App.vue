@@ -1,17 +1,34 @@
 <template>
   <div id="app">
-    <component :is="layout">
+    <HeaderComponent></HeaderComponent>
+    <div id="app-content">
       <router-view></router-view>
-    </component>
+    </div>
+    <FooterComponent></FooterComponent>
   </div>
 </template>
 
 <script>
+    import HeaderComponent from './layout/HeaderComponent.vue';
+    import FooterComponent from './layout/FooterComponent.vue';
+
     export default {
-        computed: {
-            layout() {
-                return (this.$route.meta.layout || 'default') + '-layout';
-            }
-        }
+        components: {
+            HeaderComponent,
+            FooterComponent
+        },
     }
 </script>
+
+<!--
+<script>
+  import Traveldiary from './components/Traveldiary.vue';
+
+  export default {
+    name: 'app',
+    components: {
+      Traveldiary
+    }
+  }
+</script>
+-->

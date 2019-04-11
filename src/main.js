@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import './plugins/vuetify'
 import App from './App.vue'
 import router from './router'
 import './registerServiceWorker.js'
@@ -11,13 +10,10 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import VueApollo from 'vue-apollo'
 import './filter.js';
+import VueResource from 'vue-resource';
+import auth from './auth'
+Vue.use(auth);
 
-
-import DefaultLayout from './layouts/DefaultLayout.vue';
-import AuthLayout from './layouts/AuthLayout.vue';
-
-Vue.component('default-layout', DefaultLayout);
-Vue.component('auth-layout', AuthLayout);
 
 Vue.config.productionTip = false;
 const httpLink = new HttpLink({
@@ -45,6 +41,8 @@ Vue.use(VueForm, {
     }
 });
 
+
+Vue.use(VueResource)
 new Vue({
     router,
     provide: apolloProvider.provide(),
