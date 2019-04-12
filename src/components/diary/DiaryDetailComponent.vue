@@ -17,7 +17,8 @@
 </template>
 
 <script>
-    import { DIARY_DETAIL } from '../../../../test-traveldiary/src/constants/graphql'
+    import { DIARY_DETAIL } from '../../constants/graphql'
+
     export default {
         name: 'DiaryDetailComponent',
         data: ()=> ({

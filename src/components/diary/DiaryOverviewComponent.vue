@@ -19,9 +19,8 @@
 
 <script>
     import Diary from './DiaryPreviewComponent.vue';
-    import { ALL_PUBLIC_DIARIES_QUERY } from '../../../../test-traveldiary/src/constants/graphql'
-    import { USER_DIARIES } from '../../../../test-traveldiary/src/constants/graphql'
-
+    import { ALL_PUBLIC_DIARIES_QUERY } from '../../constants/graphql';
+    import { USER_DIARIES } from '../../constants/graphql';
 
     export default {
         name: 'DiaryOverviewComponent',
