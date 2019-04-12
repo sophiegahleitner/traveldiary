@@ -1,10 +1,10 @@
 <template>
     <div class="diary-overview">
-        <h1 v-if="!privateDiaries">Public Traveldiaries</h1>
+        <h1>Traveldiaries</h1>
         <h2 v-if ="diaries.length === 0">
-            Sorry, you have not added any diary yet.
+            Sorry, there are no diaries yet.
         </h2>
-        <section v-else class="diaries">
+        <section class="diaries">
             <router-link v-if="privateDiaries" to="/diary/create" tag="button">New Diary</router-link>
             <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end" v-bind:image="diary.image"></Diary>
         </section>

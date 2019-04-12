@@ -23,7 +23,7 @@ const router = new Router({
             component: Traveldiary
         }, {
             path: '/diary/create',
-            name: 'CreateDiary',
+            name: 'createDiary',
             component: CreateDiary,
         }, {
             path: '/diary/:id',
