@@ -1,9 +1,11 @@
 <template>
     <li class="diary-preview">
         <router-link :to="{ name: 'diary', params:{id: id} }">
-            <div class="diary-preview-image">
-                <img alt="Vue logo" src="../../assets/img/example.jpg">
-            </div>
+            <div v-if="image" class="diary-preview-image">
+                <img
+                        :alt="`${image.handle}`"
+                        :src="`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${image.handle}`"
+                />            </div>
             <div class="diary-facts">
                 <h2>{{country}}</h2>
                 <h3>{{begin | formatDate}}-</h3>
@@ -36,7 +38,8 @@
             id: String,
             country: String,
             begin: String,
-            end: String
+            end: String,
+            image: Object
         }
     }
 </script>

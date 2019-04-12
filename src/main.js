@@ -49,3 +49,15 @@ new Vue({
     store,
     render: h => h(App),
 }).$mount('#app');
+
+const prod = process.env.NODE_ENV === 'production';
+const swLocation = '../public/sw-config.js';
+
+if (
+    prod &&
+    ('https:' === location.protocol || location.host.match(/(localhost|127.0.0.1)/)||location.host.match(/(localhost:8080)/)) &&
+    navigator.serviceWorker
+) {
+    navigator.serviceWorker.register(swLocation).catch( error => console.log)
+    console.log('sw register');
+}

@@ -61,12 +61,10 @@
 
             // Add some data
             polygonSeries.data = [{
-                "id": "US",
                 "name": "United States",
                 "value": 100,
                 "fill": am4core.color("#78AAC3")
             }, {
-                "id": "FR",
                 "name": "France",
                 "value": 50,
                 "fill": am4core.color("#78AAC3")

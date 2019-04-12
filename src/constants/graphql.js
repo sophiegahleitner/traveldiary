@@ -2,11 +2,15 @@
 import gql from 'graphql-tag'
 export const ALL_PUBLIC_DIARIES_QUERY = gql`
 query AllDiariesQuery{
-    diaries(where: {isPublic : true }){id, country, begin, end}
+    diaries(where: {isPublic : true }){id, country, begin, end, image {
+          handle
+        }}
     }`;
 export const USER_DIARIES = gql`
 query UserDiariesQuery($userId: String!){
-    diaries(where: {userId : $userId }){id, country, begin, end}
+    diaries(where: {userId : $userId }){id, country, begin, end,         image {
+          handle
+        }}
     }`;
 
 export const DIARY_DETAIL = gql`

@@ -1,5 +1,5 @@
 <template>
-    <div class="callback">Callback</div>
+    <div class="callback">Redirecting ...</div>
 </template>
 
 <script>

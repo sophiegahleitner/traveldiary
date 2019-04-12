@@ -1,5 +1,6 @@
 import auth0 from 'auth0-js'
 import Vue from 'vue'
+import Router from './router'
 
 
 // exchange the object with your own from the setup step above.
@@ -64,6 +65,8 @@ let auth = new Vue({
                     returnTo: 'localhost:8080/', // Allowed logout URL listed in dashboard
                     clientID: 'w2NUP6DWlcOVqp5HUPdfv04giNnrg6E6', // Your client ID
                 })
+                Router.push({name:'Traveldiary'})
+                window.location.reload()
             })
         },
         isAuthenticated() {

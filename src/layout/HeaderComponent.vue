@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="logo">
-            <span>Traveldiary</span>
+            <router-link :to="{ name: 'Traveldiary'}">Traveldiary</router-link>
         </div>
         <div v-if="this.$auth.isAuthenticated()" class="navigation">
             <router-link :to="{ name: 'profile'}">Profile</router-link>

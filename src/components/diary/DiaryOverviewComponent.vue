@@ -6,7 +6,7 @@
         </h2>
         <section v-else if="diaries">
             <ul>
-                <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end"></Diary>
+                <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end" v-bind:image="diary.image"></Diary>
             </ul>
         </section>
 
