@@ -1,27 +1,21 @@
 <template>
     <div class="diary-overview">
-        <h1>My Traveldiaries</h1>
-        <h2 v-if ="diaries.length==0">
-            No Diaries
+        <h1>Traveldiaries</h1>
+        <h2 v-if ="diaries.length === 0">
+            Sorry, there are no diaries yet.
         </h2>
-        <section v-else if="diaries">
-            <ul>
-                <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end" v-bind:image="diary.image"></Diary>
-            </ul>
+        <section class="diaries">
+            <router-link v-if="privateDiaries" to="/diary/create" tag="button">New Diary</router-link>
+            <Diary v-for="diary in diaries" :key="diary.id" v-bind:id="diary.id" v-bind:country="diary.country" v-bind:begin="diary.begin" v-bind:end="diary.end" v-bind:image="diary.image"></Diary>
         </section>
-
-        <h2 v-else>
-            Loading...
-        </h2>
     </div>
 </template>
 
 
 <script>
     import Diary from './DiaryPreviewComponent.vue';
-    import { ALL_PUBLIC_DIARIES_QUERY } from '../../../../test-traveldiary/src/constants/graphql'
-    import { USER_DIARIES } from '../../../../test-traveldiary/src/constants/graphql'
-
+    import { ALL_PUBLIC_DIARIES_QUERY } from '../../constants/graphql';
+    import { USER_DIARIES } from '../../constants/graphql';
 
     export default {
         name: 'DiaryOverviewComponent',
@@ -31,7 +25,8 @@
         data() {
             return {
                 diaries: [],
-                loading: 0
+                loading: 0,
+                privateDiaries: this.$route.name === 'profile',
             }
         },
         apollo: {
@@ -39,14 +34,14 @@
 //            diaries: ALL_PUBLIC_DIARIES_QUERY
             diaries:{
                 query(){
-                    if(this.$route.name == 'profile'){
+                    if(this.privateDiaries){
                         return USER_DIARIES
                     } else {
                         return ALL_PUBLIC_DIARIES_QUERY
                     }
                 },
                 variables(){
-                    if(this.$route.name == 'profile'){
+                    if(this.privateDiaries){
                         return {
                             userId: this.$auth.user.name
                         }

@@ -80,7 +80,7 @@
 </template>
 
 <script>
-    import { CREATE_DIARY } from '../../../../test-traveldiary/src/constants/graphql'
+    import { CREATE_DIARY } from '../../constants/graphql'
     import * as Filestack from 'filestack-js';
 
     export default {

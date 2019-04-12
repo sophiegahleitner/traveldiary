@@ -1,4 +1,11 @@
-#app-content {
-  color: #606c76;
-  padding: 50px;
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  &-content {
+    color: #606c76;
+    padding: 50px;
+    flex: 1;
+  }
 }

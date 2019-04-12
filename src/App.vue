@@ -9,8 +9,8 @@
 </template>
 
 <script>
-    import HeaderComponent from '../../test-traveldiary/src/layout/HeaderComponent.vue';
-    import FooterComponent from '../../test-traveldiary/src/layout/FooterComponent.vue';
+    import HeaderComponent from './components/layout/HeaderComponent.vue';
+    import FooterComponent from './components/layout/FooterComponent.vue';
 
     export default {
         components: {

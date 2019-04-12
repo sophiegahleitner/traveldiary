@@ -5,7 +5,7 @@
     </h2>
     <div class="diary-details" v-else>
         <h1>Diary Details</h1>
-        <div v-if="image" class="diary-image">
+        <div v-if="diary.image" class="diary-image">
         <img
                 :alt="diary.id"
                 :src="`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${diary.image.handle}`"
@@ -17,7 +17,8 @@
 </template>
 
 <script>
-    import { DIARY_DETAIL } from '../../../../test-traveldiary/src/constants/graphql'
+    import { DIARY_DETAIL } from '../../constants/graphql'
+
     export default {
         name: 'DiaryDetailComponent',
         data: ()=> ({
