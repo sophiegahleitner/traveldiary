@@ -1,18 +1,18 @@
 <template>
     <div class="traveldiary">
-        <Diaries></Diaries>
+        <DiaryOverviewComponent></DiaryOverviewComponent>
         <MapComponent></MapComponent>
     </div>
 </template>
 
 <script>
-    import Diaries from './diary/DiaryOverviewComponent.vue';
-    import MapComponent from './MapComponent.vue';
+    import DiaryOverviewComponent from './diary/DiaryOverviewComponent.vue';
+    import MapComponent from './map/MapComponent.vue';
 
     export default {
         name: 'traveldiary',
         components: {
-            Diaries,
+            DiaryOverviewComponent,
             MapComponent,
         },
     }

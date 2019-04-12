@@ -1,5 +1,5 @@
 <template>
-    <li class="diary-preview">
+    <div class="diary-preview">
         <router-link :to="{ name: 'diary', params:{id: id} }">
             <div v-if="image" class="diary-preview-image">
                 <img
@@ -12,7 +12,7 @@
                 <h3>{{end | formatDate}}</h3>
             </div>
         </router-link>
-    </li>
+    </div>
 </template>
 
 <style>

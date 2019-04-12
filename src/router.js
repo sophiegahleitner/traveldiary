@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Traveldiary from './components/Traveldiary.vue';
 import CreateDiary from './components/diary/CreateDiaryComponent.vue';
 import DiaryDetail from './components/diary/DiaryDetailComponent.vue';
-import ProfileComponent from './components/ProfileComponent.vue';
+import ProfileComponent from './components/auth/ProfileComponent.vue';
 import CallbackComponent from './components/auth/Callback.vue';
 
 Vue.use(Router)
@@ -14,7 +14,12 @@ const router = new Router({
     routes: [
         {
             path: '/',
-            name: 'Traveldiary',
+            name: 'traveldiary',
+            redirect: '/diaries',
+            component: Traveldiary
+        }, {
+            path: '/diaries',
+            name: 'diaries',
             component: Traveldiary
         }, {
             path: '/diary/create',
