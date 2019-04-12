@@ -14,16 +14,6 @@
 
 <script>
     export default {
-        name: 'headerComponent',
-        methods: {
-            logout() {
-                this.$store.dispatch('logout');
-            }
-        },
-        computed: {
-            isLoggedIn() {
-                return this.$store.getters.isLoggedIn;
-            }
-        },
+        name: 'headerComponent'
     }
 </script>

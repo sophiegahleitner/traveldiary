@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>made by Sophie Gahleitner & Michael Sieghartsleitner</p>
+        <p id = "c">made by Sophie Gahleitner & Michael Sieghartsleitner</p>
     </footer>
 </template>
 

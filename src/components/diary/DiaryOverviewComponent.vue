@@ -19,8 +19,8 @@
 
 <script>
     import Diary from './DiaryPreviewComponent.vue';
-    import { ALL_PUBLIC_DIARIES_QUERY } from '../../constants/graphql'
-    import { USER_DIARIES } from '../../constants/graphql'
+    import { ALL_PUBLIC_DIARIES_QUERY } from '../../../../test-traveldiary/src/constants/graphql'
+    import { USER_DIARIES } from '../../../../test-traveldiary/src/constants/graphql'
 
 
     export default {
@@ -32,11 +32,6 @@
             return {
                 diaries: [],
                 loading: 0
-            }
-        },
-        methods: {
-            createDiary: function () {
-                this.diaries.push({id:this.diaries.length+1, country: document.getElementById("country").value, time: document.getElementById("time").value});
             }
         },
         apollo: {

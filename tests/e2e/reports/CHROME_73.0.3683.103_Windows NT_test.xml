@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="test"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="0"
+    tests="1" time="8.636" timestamp="Fri, 12 Apr 2019 16:02:25 GMT">
+  
+    <testcase name="default e2e tests" classname="test" time="8.636" assertions="2">
+
+      <failure message="Testing if element &lt;.hello&gt; is present.">    at Object.default e2e tests (D:\VueJS\test-traveldiary\tests\e2e\specs\test.js:9:15)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
