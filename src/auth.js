@@ -8,7 +8,7 @@ let webAuth = new auth0.WebAuth({
     domain: 'dev-gz1b6l9p.eu.auth0.com',
     clientID: 'w2NUP6DWlcOVqp5HUPdfv04giNnrg6E6',
     // make sure this line is contains the port: 8080
-    redirectUri: 'http://localhost:8080/callback',
+    redirectUri: 'https://nervous-knuth-c55d1a.netlify.com/callback',
     // we will use the api/v2/ to access the user information as payload
     audience: 'https://dev-gz1b6l9p.eu.auth0.com/api/v2/',
     responseType: 'token id_token',
@@ -62,7 +62,7 @@ let auth = new Vue({
                 localStorage.removeItem('expires_at')
                 localStorage.removeItem('user')
                 webAuth.logout({
-                    returnTo: 'localhost:8080/', // Allowed logout URL listed in dashboard
+                    returnTo: 'https://nervous-knuth-c55d1a.netlify.com/', // Allowed logout URL listed in dashboard
                     clientID: 'w2NUP6DWlcOVqp5HUPdfv04giNnrg6E6', // Your client ID
                 })
                 Router.push({name:'Traveldiary'})
